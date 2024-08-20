@@ -28,6 +28,9 @@ const loyaltyController = new LoyaltyController(loyaltyDao);
 // Initialise application server
 const app = express();
 
+// Allow JSON
+app.use(express.json());
+
 app.get('/all', loyaltyController.getAllSchemes);
 
 app.patch('/activate', loyaltyController.activateScheme);
