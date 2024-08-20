@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import express, { Request, Response } from 'express';
+import express from 'express';
 import mongoose from 'mongoose';
 import { LoyaltyDao } from './dao/LoyaltyDao';
 import { LoyaltyRecordModel } from './models/loyalty';
@@ -13,9 +13,9 @@ const MONGO_DB_URI: string = process.env.DB_URI!;
 
 // Connect to inventory database
 mongoose.connect(MONGO_DB_URI)
-  .then(() => console.log('✅ Connected to additonal charges database'))
+  .then(() => console.log('✅ Connected to additional charges database'))
   .catch(error => {
-    console.log('❌ Failed to connect to additonal charges database');
+    console.log('❌ Failed to connect to additional charges database');
     console.error(error);
   });
 

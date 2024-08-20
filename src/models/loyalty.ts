@@ -35,7 +35,8 @@ const loyaltyRecordSchema = new Schema<ILoyaltyRecordDocument>(
             type: Date,
             default: Date.now(),
         },
-    }
+    },
+    { collection: 'loyalty_discounts', }
 );
 
 export const LoyaltyRecordModel = model<ILoyaltyRecordDocument>('LoyaltyRecord', loyaltyRecordSchema);
