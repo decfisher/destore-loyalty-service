@@ -32,7 +32,7 @@ app.get('/all', loyaltyController.getAllSchemes);
 
 app.patch('/activate', loyaltyController.activateScheme);
 
-app.patch('/deactivate', loyaltyController.activateScheme);
+app.patch('/deactivate', loyaltyController.deactivateScheme);
 
 // Start the server
 app.listen(port, () => {

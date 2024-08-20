@@ -26,4 +26,14 @@ export class LoyaltyController {
             next(error);
         }
     }
+
+    deactivateScheme = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { id } = req.body;
+            const record = await this.loyaltyDao.deactivateScheme(id);
+            res.status(200).json(record);
+        } catch (error) {
+            next(error);
+        }
+    }
 }
